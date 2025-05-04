@@ -1,12 +1,36 @@
 export default function NavLogin() {
   return (
-    <div className="nav-div" id="nav-link-accountList">
-        <a href="/" className="nav-a nav-a-2   nav-progressive-attribute" data-nav-ref="nav_ya_signin" data-nav-role="signin" data-ux-jq-mouseenter="true" tabIndex="0" data-csa-c-type="link" data-csa-c-slot-id="nav-link-accountList" data-csa-c-content-id="nav_ya_signin" aria-controls="nav-flyout-accountList" data-csa-c-id="9sflzb-ue3ccr-yc40wn-v64p8t">
-            <div className="nav-line-1-container"><span id="nav-link-accountList-nav-line-1" className="nav-line-1 nav-progressive-content">Hola, Identifícate</span></div>
-            <span className="nav-line-2 ">Cuenta y Listas
+    <div className="flex items-center relative px-2 group" id="nav-link-accountList">
+        <a
+            href="/"
+            className="flex flex-col text-sm text-gray-800 hover:text-black"
+            aria-controls="nav-flyout-accountList"
+            tabIndex="0"
+        >
+            <span className="text-xs text-gray-600 group-hover:underline">
+            Hola, Identifícate
+            </span>
+            <span className="font-medium group-hover:underline">
+            Cuenta y Listas
             </span>
         </a>
-        <button className="nav-flyout-button nav-icon nav-arrow" aria-label="Expandir cuenta y listas" tabIndex="0" style={{visibility: 'visible'}}></button>
+
+        {/* Icono de flecha */}
+        <button
+            className="ml-1 text-gray-500 group-hover:text-black"
+            aria-label="Expandir cuenta y listas"
+            tabIndex="0"
+        >
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
     </div>
   )
 }

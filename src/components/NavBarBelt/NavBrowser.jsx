@@ -1,71 +1,55 @@
 export default function NavBrowser() {
   return (
-            <div id="nav-bar-left">
-                <form id="nav-search-bar-form" acceptCharset="utf-8" action="/s/ref=nb_sb_noss" className="nav-searchbar nav-progressive-attribute" method="GET" name="site-search" role="search">
-                    <div id="nav-search-bar-internationalization-key" className="nav-progressive-content">
-                        <input type="hidden" name="__mk_es_US" value="ÅMÅŽÕÑ"/>
-                    </div>
-
-                        <div className="nav-left">
-                            <div id="nav-search-dropdown-card">
-                        
-                                <div className="nav-search-scope nav-sprite">
-                                    <div className="nav-search-facade" data-value="search-alias=aps">
-                                        <span id="nav-search-label-id" className="nav-search-label nav-progressive-content" style={{width: 'auto'}}>Promociones</span>
-                                        <i className="nav-icon"></i>
-                                    </div>
-                                    <label id="searchDropdownDescription" htmlFor="searchDropdownBox" className="nav-progressive-attribute" style={{display:'none'}}>Selecciona el departamento donde deseas realizar tu búsqueda</label>
-                                    <select aria-describedby="searchDropdownDescription" className="nav-search-dropdown searchSelect nav-progressive-attrubute nav-progressive-search-dropdown" data-nav-digest="7cutoWRC4pwALhDmIo2D7A5QEjk=" data-nav-selected="0" id="searchDropdownBox" name="url" style={{display: 'block', top: '2.5px'}} tabIndex="0" title="Buscar en">
-                                        <option defaultValue="selected" current="true" value="search-alias=todays-deals">Promociones</option>
-                                        <option value="search-alias=aps">Todos los departamentos</option>
-                                        <option value="search-alias=arts-crafts-intl-ship">Arte y artesanías</option>
-                                        <option value="search-alias=automotive-intl-ship">Automotriz</option>
-                                        <option value="search-alias=baby-products-intl-ship">Bebé</option>
-                                        <option value="search-alias=beauty-intl-ship">Belleza y cuidado personal</option>
-                                        <option value="search-alias=movies-tv-intl-ship">Cine y TV</option>
-                                        <option value="search-alias=computers-intl-ship">Computadoras</option>
-                                        <option value="search-alias=sporting-intl-ship">Deportes y actividades al aire libre</option>
-                                        <option value="search-alias=electronics-intl-ship">Electrónicos</option>
-                                        <option value="search-alias=luggage-intl-ship">Equipaje</option>
-                                        <option value="search-alias=tools-intl-ship">Herramientas y mejoramiento del hogar</option>
-                                        <option value="search-alias=kitchen-intl-ship">Hogar y cocina</option>
-                                        <option value="search-alias=industrial-intl-ship">Industrial y científico</option>
-                                        <option value="search-alias=pets-intl-ship">Insumos para mascotas</option>
-                                        <option value="search-alias=toys-and-games-intl-ship">Juguetes y juegos</option>
-                                        <option value="search-alias=stripbooks-intl-ship">Libros</option>
-                                        <option value="search-alias=fashion-girls-intl-ship">Moda de niñas</option>
-                                        <option value="search-alias=fashion-boys-intl-ship">Moda de niños</option>
-                                        <option value="search-alias=fashion-mens-intl-ship">Moda para Hombre</option>
-                                        <option value="search-alias=fashion-womens-intl-ship">Moda para Mujer</option>
-                                        <option value="search-alias=digital-music">Música MP3</option>
-                                        <option value="search-alias=music-intl-ship">Música, CD y vinilos</option>
-                                        <option value="search-alias=deals-intl-ship">Ofertas</option>
-                                        <option value="search-alias=instant-video">Prime Video</option>
-                                        <option value="search-alias=hpc-intl-ship">Salud y productos para el hogar</option>
-                                        <option value="search-alias=software-intl-ship">Software</option>
-                                        <option value="search-alias=digital-text">Tienda Kindle</option>
-                                        <option value="search-alias=videogames-intl-ship">Videojuegos</option>
-                                    </select>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div className="nav-fill">
-                            <div className="nav-search-field ">
-                                <label htmlFor="twotabsearchtextbox" style={{display: 'none'}}>Buscar en Amazon</label>
-                                <input type="text" id="twotabsearchtextbox" defaultValue="" name="field-keywords" autoComplete="off" placeholder="Buscar en Amazon" className="nav-input nav-progressive-attribute" dir="auto" tabIndex="0" aria-label="Buscar en Amazon" role="searchbox" aria-autocomplete="list" aria-controls="sac-autocomplete-results-container" aria-expanded="false" aria-haspopup="grid" spellCheck="false"/>
-                            </div>
-                            <div id="nav-iss-attach"></div>
-                        </div>
-                        <div className="nav-right">
-                            <div className="nav-search-submit nav-sprite">
-                                <span id="nav-search-submit-text" className="nav-search-submit-text nav-sprite nav-progressive-attribute" aria-label="Ir">
-                                <input id="nav-search-submit-button" type="submit" className="nav-input nav-progressive-attribute" value="Ir" tabIndex="0"/>
-                                </span>
-                            </div>
-                        </div>
-                </form>
-            </div>
+    <div id="nav-bar-left" className="flex w-full max-w-5xl mx-auto">
+        <form
+        id="nav-search-bar-form"
+        acceptCharset="utf-8"
+        action="/s/ref=nb_sb_noss"
+        method="GET"
+        name="site-search"
+        role="search"
+        className="flex w-full bg-white rounded-md overflow-hidden border border-gray-300 focus-within:border-yellow-500 transition"
+        >
+        {/* Campo oculto */}
+        <input type="hidden" name="__mk_es_US" value="ÅMÅŽÕÑ" />
+    
+        {/* Selector de categorías */}
+        <div className="relative">
+            <select
+            name="url"
+            id="searchDropdownBox"
+            className="h-full pl-2 pr-6 py-2 text-sm bg-gray-100 text-gray-700 border-r border-gray-300 focus:outline-none"
+            aria-describedby="searchDropdownDescription"
+            >
+            <option value="search-alias=todays-deals" defaultValue="selected">Promociones</option>
+            <option value="search-alias=aps">Todos los departamentos</option>
+            <option value="search-alias=arts-crafts-intl-ship">Arte y artesanías</option>
+            <option value="search-alias=automotive-intl-ship">Automotriz</option>
+            <option value="search-alias=baby-products-intl-ship">Bebé</option>
+            <option value="search-alias=beauty-intl-ship">Belleza</option>
+            </select>
+        </div>
+    
+        {/* Campo de búsqueda */}
+        <input
+            type="text"
+            name="field-keywords"
+            placeholder="Buscar en Amazon"
+            className="flex-grow px-4 py-2 text-sm text-gray-900 focus:outline-none"
+            aria-label="Buscar en Amazon"
+            autoComplete="off"
+            role="searchbox"
+        />
+    
+        {/* Botón de búsqueda */}
+        <button
+            type="submit"
+            className="bg-yellow-400 hover:bg-yellow-500 px-4 text-sm font-medium text-gray-800"
+            aria-label="Buscar"
+        >
+            Ir
+        </button>
+        </form>
+    </div>
   )
 }
