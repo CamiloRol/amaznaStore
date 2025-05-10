@@ -1,6 +1,7 @@
 import NadLang from "./NadLang";
 import NavBrowser from "./NavBrowser";
 import NavCart from "./NavCart";
+import NavCategories from "./NavCategories";
 import NavLocation from "./NavLocation";
 import NavLogin from "./NavLogin";
 import NavLogo from "./NavLogo";
@@ -27,6 +28,7 @@ export default function Navbar() {
                 <NavCart />
             </div>
         </div>
+        <NavCategories />
     </>
   )
 }
