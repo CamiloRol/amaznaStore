@@ -6,14 +6,14 @@ export default function NavLogo() {
         <div id="nav-logo">
             <a
             href="/"
-            aria-label="Amazon"
+            aria-label="Amazna"
             lang="en"
             className="flex items-center space-x-2"
             >
             <img
-                src="/logoshort.png"
+                src="/logoblanco.png"
                 alt="logoAmazna"
-                className="h-10 w-auto object-contain"
+                className="h-auto w-24 sm:w-32 md:w-40 lg:w-48 object-contain"
             />
             <span className="hidden nav-sprite nav-logo-base"></span>
             <span className="hidden nav-sprite nav-logo-ext nav-progressive-content"></span>
