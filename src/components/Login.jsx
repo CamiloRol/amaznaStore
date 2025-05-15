@@ -16,7 +16,7 @@ export default function Login() {
             <input
               type="email"
               id="email"
-              className="w-full px-4 py-2 bg-gray-800 text-white border border-blue-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-300"
+              className="w-full px-4 py-2 bg-white text-black border border-blue-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-300"
               placeholder="correo@ejemplo.com"
               required
             />
@@ -27,24 +27,26 @@ export default function Login() {
             <input
               type="password"
               id="password"
-              className="w-full px-4 py-2 bg-gray-800 text-white border border-blue-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-300"
+              className="w-full px-4 py-2 bg-white text-black border border-blue-400 rounded focus:outline-none focus:ring-2 focus:ring-orange-300"
               placeholder="********"
               required
             />
           </div>
-
+            
           <button
             type="submit"
-            className="w-full py-2 bg-gradient-to-r from-blue-400 via-white-500 to-blue-300 text-black font-bold rounded hover:from-orange-300 hover:to-orange-500 transition duration-300"
+            className="w-full py-2 bg-gradient-to-r from-blue-400 via-white-500 to-blue-300 text-black font-bold rounded hover:from-orange-300 hover:to-red-500 transition duration-300"
           >
             Iniciar sesión
           </button>
+          
         </form>
-
+        <Link to="/Register">
         <p className="text-center mt-4 text-sm">
           ¿No tienes cuenta?{' '}
           {/* <Link to="/Register" className="text-orange-400 hover:underline">Regístrate</Link> */}
         </p>
+        </Link>
       </div>
     </div>
   );
