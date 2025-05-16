@@ -2,35 +2,35 @@ import { Link } from 'react-router-dom';
 /* import { useForm } from 'react-hook-form'; */
 
 export default function Register() {
- /*  const { register, formState: { errors }, handleSubmit } = useForm();
+  /*  const { register, formState: { errors }, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
   };
- */
+  */
+
   return (
     <div
       className="flex justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundColor: '#141414',
-        /* backgroundImage: 'url("/loogin.png")', */
+        /* backgroundColor: '#141414', */
+        backgroundImage: 'url("/BGamazna.png")',
         backdropFilter: 'blur(100px)',
       }}
     >
-      <div className="bg-black bg-opacity- text-white rounded-xl p-6 shadow-lg w-[90%] max-w-xl my-8">
-        <h1 className="text-center text-3xl font-bold mb-6 text-blue-400">
+      <div className="bg-black bg-white text-blue-400 rounded-xl p-15 shadow-lg w-[90%] max-w-xl mt-30">
+        <h1 className="text-center text-3xl font-bold mb-6">
           Formulario de Registro
         </h1>
 
         <form /* onSubmit={handleSubmit(onSubmit)} */ className="space-y-4">
-
           {/* Nombre */}
           <div>
             <label className="block mb-1 text-lg">User Name</label>
             <input
               type="text"
-              className="w-full bg-zinc-800 text-white border border-blue-400 px-4 py-2 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-blue-400"
-             /*  {...register('name', {
+              className="w-full text-white border border-blue-400 px-4 py-2 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-blue-400"
+              /*  {...register('name', {
                 required: true,
                 maxLength: 20,
               })} */
@@ -45,10 +45,10 @@ export default function Register() {
 
           {/* Rol */}
           <div>
-            <label className="block mb-1 text-lg ">Rol</label>
+            <label className="block mb-1 text-lg">Rol</label>
             <select
               className="w-full bg-white text-black border border-blue-400 px-4 py-2 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-blue-400"
-             /*  {...register('genre')} */
+              /*  {...register('genre')} */
             >
               <option value="Cliente">Cliente</option>
               <option value="Recepcionista">Recepcionista</option>
@@ -63,7 +63,7 @@ export default function Register() {
             <input
               type="text"
               className="w-full bg-white text-white border border-blue-400 px-4 py-2 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-blue-400"
-             /*  {...register('email', {
+              /*  {...register('email', {
                 required: true,
                 pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
               })} */
@@ -81,7 +81,7 @@ export default function Register() {
             <label className="block mb-1 text-lg">Contraseña</label>
             <input
               type="password"
-              className="w-full bg-zinc-800 text-white border border-blue-400 px-4 py-2 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full text-blue border border-blue-400 px-4 py-2 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-blue-400"
               /* {...register('password')} */
             />
           </div>
@@ -90,7 +90,7 @@ export default function Register() {
           <Link to="/Login">
             <button
               type="submit"
-              className="w-full py-2 bg-gradient-to-r from-blue-400 via-white-500 to-blue-300 text-black font-bold rounded hover:from-orange-300 hover:to-red-500 transition duration-300"
+              className="w-full py-2 bg-gradient-to-r from-blue-400 via-white-500 to-blue-300 text-black font-bold rounded hover:from-blue-100 hover:to-blue-500 transition duration-300"
             >
               Registrarse
             </button>
