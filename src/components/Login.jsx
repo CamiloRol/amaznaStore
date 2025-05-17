@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
+  const navigate = useNavigate()
   return (
     <div className="flex justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat" style={{
       backgroundImage: 'url("/loogin.png")',
@@ -42,10 +43,14 @@ export default function Login() {
           
         </form>
         <Link to="/Register">
-        <p className="text-center mt-4 text-sm">
+        <a  onClick={() => navigate(`/`)}className="text-left mt-4 text-sm">
+          - Volver al inicio -{' '}
+          {/* <Link to="/Register" className="text-orange-400 hover:underline">Regístrate</Link> */}
+        </a>
+        <a  onClick={() => navigate(`/Register`)}className="text-center mt-4 text-sm">
           ¿No tienes cuenta?{' '}
           {/* <Link to="/Register" className="text-orange-400 hover:underline">Regístrate</Link> */}
-        </p>
+        </a>
         </Link>
       </div>
     </div>

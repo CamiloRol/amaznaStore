@@ -244,7 +244,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-row items-center justify-center space-x-4">
             <div>
-              <img className="bg-white h-8 w-24 opacity-80"/>
+              <img src="/logoblanco.png" className="h-8 w-24"/>
             </div>
             <button className="border border-gray-600 rounded px-2 py-1 text-xs flex items-center hover:cursor-pointer">
               <span>COP - Pesos Colombianos</span>
