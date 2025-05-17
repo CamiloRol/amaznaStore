@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom"
+
 export default function NavLogin() {
+    const navigate = useNavigate()
   return (
     <div className="flex items-center relative px-2 group" id="nav-link-accountList">
         <a
-            href="/"
+            onClick={() => navigate('/Login')}
             className="flex flex-col text-sm text-gray-800 hover:text-black"
             aria-controls="nav-flyout-accountList"
             tabIndex="0"

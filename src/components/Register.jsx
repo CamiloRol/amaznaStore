@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 /* import { useForm } from 'react-hook-form'; */
 
 export default function Register() {
@@ -9,6 +10,7 @@ export default function Register() {
   };
   */
 
+  const navigate = useNavigate()
   return (
     <div
       className="flex justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat"
@@ -95,6 +97,10 @@ export default function Register() {
               Registrarse
             </button>
           </Link>
+          <a  onClick={() => navigate(`/`)}className="text-left mt-4 text-sm">
+          - Volver al inicio -{' '}
+          {/* <Link to="/Register" className="text-orange-400 hover:underline">Regístrate</Link> */}
+          </a>
         </form>
       </div>
     </div>

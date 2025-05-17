@@ -1,6 +1,6 @@
 export default function Banner() {
   return (
-    <div>
+    <div className="">
       <img src="/Banner.png" alt="bannerprovisional" />
     </div>
   )
