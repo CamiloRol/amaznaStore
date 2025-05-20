@@ -3,6 +3,8 @@ import { DashboradPage } from "./admin/pages/DashboradPage";
 import Home from "./pages/Home/Home";
 import { Route, Routes } from "react-router-dom";
 import { ProtecterRoute } from "./admin/components/ProtecterRoute";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
 
 function App() {
 
@@ -12,7 +14,8 @@ function App() {
     // Peticion al backend real
     setUser({
       id: 1,
-      name: "Manu"
+      name: "Manu",
+      rol:"admin"
     })
   };
 
@@ -21,16 +24,17 @@ function App() {
   return (
     <>
 
-    {
-      user? (
+     {
+      user ? (
         <button onClick={logout}>Logout</button>
       ) : (
-        <button onClick={login}>Login</button>
+        <button onClick={login}> Login</button>
       )
-    }
-
+     }
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
       </Routes>
       <Routes>
         <Route path="/dashboard" element={
