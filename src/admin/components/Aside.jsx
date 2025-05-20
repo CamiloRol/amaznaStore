@@ -1,6 +1,13 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export const Aside = () => {
+  const [isCollapseTwoOpen, setIsCollapseTwoOpen] = useState(false);
+
+  const toggleCollapseTwo = () => {
+    setIsCollapseTwoOpen(!isCollapseTwoOpen);
+  };
+
   return (
     <>
       <ul className="flex flex-col bg-gray-900 text-gray-300 w-64 min-h-screen p-4" id="accordionSidebar">
@@ -34,12 +41,20 @@ export const Aside = () => {
 
         {/* Nav Item - Pages Collapse Menu */}
         <li className="mt-2">
-          <Link to={"/dashboard"} className="flex items-center gap-2 p-3 rounded-md hover:bg-gray-800 transition" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
+          <button
+            onClick={toggleCollapseTwo}
+            className="flex items-center gap-2 p-3 rounded-md hover:bg-gray-800 transition w-full text-left"
+            aria-expanded={isCollapseTwoOpen}
+            aria-controls="collapseTwo"
+          >
             <i className="fas fa-cog text-gray-400"></i>
             <span>Productos</span>
-          </Link>
-          <div id="collapseTwo" className="hidden mt-2 bg-gray-800 rounded-md p-2">
+          </button>
+
+          <div
+            id="collapseTwo"
+            className={`${isCollapseTwoOpen ? 'block' : 'hidden'} mt-2 bg-gray-800 rounded-md p-2`}
+          >
             <h6 className="text-gray-400 text-sm font-medium">Acciones:</h6>
             <Link to={"/products"} className="block text-gray-400 hover:text-gray-200 mt-1 hover:underline">Ver Productos</Link>
             <Link to={"/products"} className="block text-gray-400 hover:text-gray-200 mt-1 hover:underline">Crear Productos</Link>

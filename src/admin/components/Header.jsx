@@ -17,8 +17,8 @@ export const Header = () => {
         <li className="relative">
             <a href="#" className="text-gray-600 hover:text-gray-800 relative flex items-center">
             <i className="fas fa-bell"></i>
-            <span className="absolute top-0 right-0 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">
-                3+
+            <span className="absolute top-0 right-0 bg-[#FF7F50] text-white rounded-full text-sm w-7 h-7 flex items-center justify-center transform translate-x-1/2 -translate-y-1/2 shadow-lg ring-2 ring-white transition duration-300 hover:scale-110 hover:shadow-xl">
+              3+
             </span>
             </a>
         </li>
@@ -27,15 +27,15 @@ export const Header = () => {
         <li className="relative">
             <a href="#" className="text-gray-600 hover:text-gray-800 relative flex items-center">
             <i className="fas fa-envelope"></i>
-            <span className="absolute top-0 right-0 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center transform translate-x-1/2 -translate-y-1/2">
-                7
+            <span className="absolute top-0 right-0 bg-[#FF7F50] text-white rounded-full text-sm w-7 h-7 flex items-center justify-center transform translate-x-1/2 -translate-y-1/2 shadow-lg ring-2 ring-white transition duration-300 hover:scale-110 hover:shadow-xl">
+              7+
             </span>
             </a>
         </li>
 
         {/* Pefil del Usuariio */}
         <li className="relative flex items-center space-x-2">
-        <span className="hidden lg:block text-gray-300 text-sm">Administrador</span>
+        <span className="hidden lg:block text-gray-500 text-sm">Administrador</span>
         <div className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center">
             <i className="fas fa-user text-white"></i>
         </div>
