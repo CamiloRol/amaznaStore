@@ -23,18 +23,10 @@ function App() {
   return (
     <>
 
-    {
-      user? (
-        <button onClick={logout}>Logout</button>
-      ) : (
-        <button onClick={login}>Login</button>
-      )
-    }
-
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={LoginPage} />
-        <Route path="/register" element={RegisterPage} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
       </Routes>
       <Routes>
         <Route path="/dashboard" element={
