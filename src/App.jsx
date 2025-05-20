@@ -14,7 +14,8 @@ function App() {
     // Peticion al backend real
     setUser({
       id: 1,
-      name: "Manu"
+      name: "Manu",
+      rol:"admin"
     })
   };
 
@@ -23,6 +24,13 @@ function App() {
   return (
     <>
 
+     {
+      user ? (
+        <button onClick={logout}>Logout</button>
+      ) : (
+        <button onClick={login}> Login</button>
+      )
+     }
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
