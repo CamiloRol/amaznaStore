@@ -5,7 +5,7 @@ export default function NavLogin() {
   return (
     <div className="flex items-center relative px-2 group" id="nav-link-accountList">
         <a
-            onClick={() => navigate('/Login')}
+            onClick={() => navigate('/login')}
             className="flex flex-col text-sm text-gray-800 hover:text-black"
             aria-controls="nav-flyout-accountList"
             tabIndex="0"

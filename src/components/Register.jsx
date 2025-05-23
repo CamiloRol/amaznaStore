@@ -20,7 +20,7 @@ export default function Register() {
         backdropFilter: 'blur(100px)',
       }}
     >
-      <div className="bg-black bg-white text-blue-400 rounded-xl p-15 shadow-lg w-[90%] max-w-xl mt-30">
+      <div className="bg-black-100 bg-white text-blue-400 rounded-xl p-15 shadow-lg w-[90%] max-w-xl mt-30">
         <h1 className="text-center text-3xl font-bold mb-6">
           Formulario de Registro
         </h1>
@@ -53,9 +53,11 @@ export default function Register() {
               /*  {...register('genre')} */
             >
               <option value="Cliente">Cliente</option>
-              <option value="Recepcionista">Recepcionista</option>
-              <option value="Mesero">Mesero</option>
-              <option value="Admin">Admin</option>
+              <option value="Recepcionista">Super-admin</option>
+              <option value="Mesero">Admin</option>
+              <option value="Admin">Developer</option>
+              <option value="Admin">marketer</option>
+              <option value="Admin">Staff</option>
             </select>
           </div>
 
