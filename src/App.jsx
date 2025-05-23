@@ -21,6 +21,8 @@ function App() {
 
   const logout = () => setUser(null);
 
+  console.log("Valor user :V: ", user);
+
   return (
     <>
 
@@ -31,6 +33,8 @@ function App() {
         <button onClick={login}> Login</button>
       )
      }
+
+  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
