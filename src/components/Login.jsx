@@ -29,6 +29,7 @@ export default function Login() {
         const { user, token } = data;
 
         localStorage.setItem('token', token);
+        localStorage.setItem('userEmail', email); // Guardo solo el email en localStorage
 
         if (['admin', 'developer', 'marketer', 'staff'].includes(user.rol)) {
           navigate('/dashboard');

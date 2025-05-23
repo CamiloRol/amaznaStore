@@ -31,7 +31,7 @@ export default function NavCart() {
             </svg>
             </div>
             <div className="flex flex-col">
-            <span className="text-xs text-gray-500 hidden sm:inline">Carrito</span>
+            <span className="text-xs text-gray-400 hidden sm:inline">Carrito</span>
             </div>
         </a>
     </div>

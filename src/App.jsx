@@ -19,21 +19,10 @@ function App() {
     })
   };
 
-  const logout = () => setUser(null);
-
   console.log("Valor user :V: ", user);
 
   return (
     <>
-
-     {
-      user ? (
-        <button onClick={logout}>Logout</button>
-      ) : (
-        <button onClick={login}> Login</button>
-      )
-     }
-
   
       <Routes>
         <Route path="/" element={<Home />} />

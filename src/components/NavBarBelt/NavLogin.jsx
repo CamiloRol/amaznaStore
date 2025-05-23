@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom"
 
 export default function NavLogin() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const userEmail = localStorage.getItem('userEmail'); // Obtengo el email
   return (
     <div className="flex items-center relative px-2 group" id="nav-link-accountList">
         <a
@@ -10,10 +11,10 @@ export default function NavLogin() {
             aria-controls="nav-flyout-accountList"
             tabIndex="0"
         >
-            <span className="text-xs text-gray-600 group-hover:underline">
-            Hola, Identifícate
+            <span className="text-xs text-gray-400 group-hover:underline">
+            Hola, {userEmail ? userEmail : "identíficate porfa"}
             </span>
-            <span className="font-medium group-hover:underline">
+            <span className="font-medium text-gray-500 group-hover:underline">
             Cuenta y Listas
             </span>
         </a>
