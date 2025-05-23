@@ -35,8 +35,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-      </Routes>
-      <Routes>
         <Route path="/dashboard" element={
           <ProtecterRoute user={user}>
             <DashboradPage/>
