@@ -28,10 +28,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/dashboard" element={
-          <ProtecterRoute user={user}>
-            <DashboradPage/>
-          </ProtecterRoute>
+        <Route path="/dashboard" element={ <DashboradPage />
+          // <ProtecterRoute user={user}>
+          //   <DashboradPage/>
+          // </ProtecterRoute>
           } />
       </Routes>
     </>
