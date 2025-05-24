@@ -1,5 +1,7 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../db.js';
+import Image from './image.js';
+
 
 const Product = sequelize.define('Product', {
     produId: {
@@ -35,3 +37,6 @@ const Product = sequelize.define('Product', {
 });
 
 export default Product;
+
+Product.hasMany(Image, { foreignKey: 'produId' });
+Image.belongsTo(Product, { foreignKey: 'produId' });

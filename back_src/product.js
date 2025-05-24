@@ -1,22 +1,26 @@
 import express from 'express';
 import Product from './models/infoproduct.js';
+import Image from './models/image.js';
+import sequelize from './db.js';
 
 const router = express.Router();
 
-let productos = [];
+router.get('/productos', async (req, res) => {
+  try {
+    const productos = await Product.findAll({
+      include: [{
+        model: Image,
+        required: false
+      }],
+      order: sequelize.literal('RAND()'),
+      limit: 6
+    });
 
-(async () => {
-    try {
-        productos = await Product.findAll({
-            attributes: ['produId', 'reference', 'produname', 'description', 'price', 'brand'],
-        });
-    } catch (error) {
-        console.error('Error al obtener productos:', error);
-    }
-})();
-
-router.get('/productos', (req, res) => {
     res.json(productos);
+  } catch (error) {
+    console.error('Error al obtener productos:', error);
+    res.status(500).json({ error: 'Error al obtener productos' });
+  }
 });
 
 export default router;
