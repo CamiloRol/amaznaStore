@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      {/* <div className="container"> */}
-        <Banner />
-      {/* </div> */}
+      
+      <Banner />
+      
       <Footer />
     </>
   )

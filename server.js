@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import auth from './back_src/auth.js';
+import product from './back_src/product.js';
 import sequelize from './back_src/db.js';
 import cors from 'cors';
 
@@ -22,8 +23,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, 'dist')));
 app.use(auth);
+app.use(product);
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('/{*any}', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
