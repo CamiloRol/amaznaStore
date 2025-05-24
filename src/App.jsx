@@ -7,32 +7,24 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 
 function App() {
-
-  const [user, setUser] = useState(null);
-
-  const login = () => {
-    // Peticion al backend real
-    setUser({
-      id: 1,
-      name: "Manu",
-      rol:"admin"
-    })
-  };
+  const user = localStorage.getItem("userEmail"); // Obtengo el email
 
   console.log("Valor user :V: ", user);
 
   return (
     <>
-  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/dashboard" element={ <DashboradPage />
-          // <ProtecterRoute user={user}>
-          //   <DashboradPage/>
-          // </ProtecterRoute>
-          } />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtecterRoute>
+              <DashboradPage />
+            </ProtecterRoute>
+          }
+        />
       </Routes>
     </>
   );
