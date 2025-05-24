@@ -12,11 +12,24 @@ export default function ProductList() {
   }, []);
 
   return (
-    <div>
-      {products.map(product => (
+
+    <div className="absolute top-170 left-10  flex space-x-4 p-4 scrollbar-hide">
+
+         {products.map(product => (
         <IndiProduct key={product.produId} product={product} />
       ))}
+        
+
     </div>
+     
   );
 }
 
+{/* <div className="absolute left-115 top-80 grid grid-cols-3 grid-rows-2 gap-10 p-4">
+
+         {products.map(product => (
+        <IndiProduct key={product.produId} product={product} />
+      ))}
+        
+
+    </div> */}
