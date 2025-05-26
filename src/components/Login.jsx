@@ -44,11 +44,22 @@ export default function Login() {
     
   }
   return (
-    <div className="flex justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: 'url("/loogin.png")',
-      backdropFilter: 'blur(100px)',
-    }}>
-      <div className="bg-black bg-opacity-85 text-white max-w-sm w-full rounded-xl p-6 shadow-lg">
+    <div
+      className="flex justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat"
+      style={{
+        /* backgroundColor: '#141414', */
+        backgroundImage: 'url("/BGamazna.png")',
+        backdropFilter: 'blur(100px)',
+      }}
+    >
+
+      <div className="absolute inset-0   mt-15 ml-160 w-60">
+        <Link to={`/`} className="flex justify-center items-center mb-6">
+        <img src="logoblanco.svg" alt="Logobbeb" />
+        </Link>
+      </div>
+
+      <div className="absolute bg-black bg-opacity-85 text-white max-w-sm w-full rounded-xl p-6 shadow-lg">
         <h1 className="text-center text-2xl font-bold text-blue-400 mb-1">¡Bienvenido!</h1>
         <h2 className="text-center text-base text-gray-200 mb-6">Inicia sesión</h2>
 

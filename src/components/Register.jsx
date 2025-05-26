@@ -20,7 +20,13 @@ export default function Register() {
         backdropFilter: 'blur(100px)',
       }}
     >
-      <div className="bg-black-100 bg-white text-blue-400 rounded-xl p-15 shadow-lg w-[90%] max-w-xl mt-30">
+       <div className="absolute inset-0  mt-5 ml-160 w-60">
+        <Link to={`/`} className="flex justify-center items-center mb-6">
+        <img src="logoblanco.svg" alt="Logobbeb" />
+        </Link>
+      </div>
+
+      <div className="bg-black-100 bg-white text-blue-400 rounded-xl p-15 shadow-lg w-[80%] max-w-xl mt-30">
         <h1 className="text-center text-3xl font-bold mb-6">
           Formulario de Registro
         </h1>

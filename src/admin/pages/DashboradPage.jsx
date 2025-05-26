@@ -8,11 +8,15 @@ import Home from "../../pages/Home/Home";
 export const DashboradPage = () => {
 
   return (
-    <>
-      <Header />
-      <Content />
+  <>
+    <Header />
+
+    <div className="flex">
       <Aside />
-      <Footer />
-    </>
-  );
+      <Content />
+    </div>
+
+    <Footer />
+  </>
+);
 };

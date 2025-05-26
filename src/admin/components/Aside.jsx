@@ -60,10 +60,52 @@ export const Aside = () => {
             <Link to={"/products"} className="block text-gray-400 hover:text-gray-200 mt-1 hover:underline">Crear Productos</Link>
           </div>
         </li>
+  <hr className="border-gray-700 my-2" />
+        {/* VENTAS  */}
+        
 
-        {/* Divider */}
+        <div className="text-sm font-semibold text-gray-400 uppercase mt-4">
+          VENTAS
+        </div>
+         <div className="flex items-center gap-2 p-3 rounded-md hover:bg-gray-800 transition w-full text-left">
+          ventas al mayor
+        </div>
+         <div className="flex items-center gap-2 p-3 rounded-md hover:bg-gray-800 transition w-full text-left">
+          ventas al Detal
+        </div>
         <hr className="border-gray-700 my-2" />
+
+        
+        {/* GRAFICAS  */}
+
+        <div className="text-sm font-semibold text-gray-400 uppercase mt-4">
+          GRAFICAS
+        </div>
+        
+         <div className="flex items-center gap-2 p-3 rounded-md hover:bg-gray-800 transition w-full text-left">
+          Reportes de Usuario
+        </div>
+        <div className="flex items-center gap-2 p-3 rounded-md hover:bg-gray-800 transition w-full text-left">
+          Mes anterior
+        </div>
+        <hr className="border-gray-700 my-2" />
+
+         {/* SOPORTE EN LINEA  */}
+
+        <div className="text-sm font-semibold text-gray-400 uppercase mt-4">
+          SOPORTTE EN LINEA
+        </div>
+         <div className="flex items-center gap-2 p-3 rounded-md hover:bg-gray-800 transition w-full text-left">
+          Mesa de ayuda
+        </div>
+         <div className="flex items-center gap-2 p-3 rounded-md hover:bg-gray-800 transition w-full text-left">
+          enviar un ticket
+        </div>
+        <hr className="border-gray-700 my-2" />
+
       </ul>
+      
+      
     </>
   );
 };
