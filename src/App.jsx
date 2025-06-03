@@ -8,8 +8,9 @@ import RegisterPage from "./pages/RegisterPage";
 
 function App() {
   const user = localStorage.getItem("userEmail"); // Obtengo el email
+  const avatarPicture = localStorage.getItem("avatarPicture");
 
-  console.log("Valor user :V: ", user);
+  console.log("Valor user :V: ", user, avatarPicture);
 
   return (
     <>
