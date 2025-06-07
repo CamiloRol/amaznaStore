@@ -1,48 +1,50 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
-      const navigate = useNavigate();
-      const handleSubmit = async (e) => {
-      e.preventDefault();
-      const email = e.target.email.value;
-      const password = e.target.password.value;
 
-      try {
-        console.log("Enviando:", email, password);
+  const navigate = useNavigate();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
 
-        const response = await fetch('http://localhost:8080/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email, password }),
-        });
+    try {
+      console.log("Enviando:", email, password);
 
-        const data = await response.json();
+      const response = await fetch("http://localhost:8080/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
 
-        console.log("Respuesta del backend:", response.status, data);
+      const data = await response.json();
 
-        if (!response.ok) {
-          throw new Error(data?.error || 'Credenciales inválidas o error de autenticación');
-        }
+      console.log("Respuesta del backend:", response.status, data);
 
-        const { user, token } = data;
-
-        localStorage.setItem('token', token);
-        localStorage.setItem('userEmail', email); // Guardo solo el email en localStorage
-
-        if (['admin', 'developer', 'marketer', 'staff'].includes(user.rol)) {
-          navigate('/dashboard');
-        } else {
-          navigate('/');
-        }
-
-      } catch (error) {
-        console.error("Error en login:", error);
-        alert(error.message);
+      if (!response.ok) {
+        throw new Error(
+          data?.error || "Credenciales inválidas o error de autenticación"
+        );
       }
-    
-  }
+
+      const { user, token, avatarPicture } = data;
+
+      localStorage.setItem("token", token);
+      localStorage.setItem("userEmail", email); // Guardo solo el email en localStorage
+      localStorage.setItem("avatarPicture", avatarPicture);
+
+      if (["admin", "developer", "marketer", "staff"].includes(user.rol)) {
+        navigate("/dashboard");
+      } else {
+        navigate("/");
+      }
+    } catch (error) {
+      console.error("Error en login:", error);
+      alert(error.message);
+    }
+  };
   return (
     <div
       className="flex justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat"
@@ -65,7 +67,9 @@ export default function Login() {
 
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="email" className="block mb-1">Email</label>
+            <label htmlFor="email" className="block mb-1">
+              Email
+            </label>
             <input
               type="email"
               id="email"
@@ -77,7 +81,9 @@ export default function Login() {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="password" className="block mb-1">Contraseña</label>
+            <label htmlFor="password" className="block mb-1">
+              Contraseña
+            </label>
             <input
               type="password"
               id="password"
@@ -87,20 +93,25 @@ export default function Login() {
               required
             />
           </div>
-            
+
           <button
             type="submit"
             className="w-full py-2 bg-gradient-to-r from-blue-400 via-white-500 to-blue-300 text-black font-bold rounded hover:from-orange-300 hover:to-red-500 transition duration-300"
           >
             Iniciar sesión
           </button>
-          
         </form>
         <div className="flex flex-col gap-2 mt-4">
-          <button onClick={() => navigate(`/`)} className="text-left text-sm underline">
+          <button
+            onClick={() => navigate(`/`)}
+            className="text-left text-sm underline"
+          >
             - Volver al inicio -
           </button>
-          <button onClick={() => navigate(`/Register`)} className="text-center text-sm underline">
+          <button
+            onClick={() => navigate(`/Register`)}
+            className="text-center text-sm underline"
+          >
             ¿No tienes cuenta? Regístrate
           </button>
         </div>

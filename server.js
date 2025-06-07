@@ -5,6 +5,7 @@ import auth from './back_src/auth.js';
 import product from './back_src/product.js';
 import sequelize from './back_src/db.js';
 import cors from 'cors';
+import router from './back_src/router.js';
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -25,7 +26,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(auth);
 app.use(product);
+app.use('/api', router);
 app.use(express.static(path.join(__dirname, 'dist')));
+
+
 
 app.get('/{*any}', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
