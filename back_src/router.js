@@ -9,16 +9,14 @@ const router = express.Router();
 router.get('/exportar-csv', async (req, res) => {
   try {
     const productos = await Product.findAll({
+      attributes: ['produId', 'reference', 'produname', 'description', 'price', 'brand'],
       include: [{ model: Image, required: false }],
       order: sequelize.literal('RAND()'),
     });
-
-    // Convertir los datos en formato CSV
-    const fields = ['id', 'nombre', 'precio', 'descripcion']; // Campos necesarios
+    const fields = ['produId', 'reference', 'produname', 'description', 'price', 'brand'];
     const json2csvParser = new Parser({ fields });
     const csv = json2csvParser.parse(productos);
 
-    // Configurar la respuesta para descargar el archivo CSV
     res.setHeader('Content-Type', 'text/csv');
     res.setHeader('Content-Disposition', 'attachment; filename=productos.csv');
     res.status(200).send(csv);

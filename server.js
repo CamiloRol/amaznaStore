@@ -5,7 +5,6 @@ import auth from './back_src/auth.js';
 import product from './back_src/product.js';
 import sequelize from './back_src/db.js';
 import cors from 'cors';
-import express from 'express';
 import router from './back_src/router.js';
 
 const app = express();

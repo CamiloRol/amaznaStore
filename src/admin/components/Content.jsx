@@ -1,6 +1,6 @@
 export const Content = () => {
   const exportarProductos = () => {
-    window.open("http://localhost:3000/exportar-csv", "_blank");
+    window.open("http://localhost:8080/api/exportar-csv", "_blank");
   };
 
   return (
