@@ -13,14 +13,12 @@ export default function ProductList() {
 
   return (
 
-    <div className="absolute top-170 left-10  flex space-x-4 p-4 scrollbar-hide">
-
-         {products.map(product => (
+     <div className="absolute top-135 flex space-x-3 p-3 scrollbar-hide">
+      {products.slice(0, 5).map(product => (
         <IndiProduct key={product.produId} product={product} />
       ))}
-        
-
     </div>
+
      
   );
 }
