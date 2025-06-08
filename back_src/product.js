@@ -13,7 +13,7 @@ router.get('/productos', async (req, res) => {
         required: false
       }],
       order: sequelize.literal('RAND()'),
-      limit: 6
+      limit: 10
     });
 
     res.json(productos);
