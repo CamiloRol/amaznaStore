@@ -7,10 +7,10 @@ export default function NavOrders_Returns() {
             tabIndex="0"
             id="nav-orders"
         >
-            <span className="text-xs text-gray-600 group-hover:underline">
+            <span className="text-xs text-gray-400 group-hover:underline">
             Devoluciones
             </span>
-            <span className="font-medium flex items-center group-hover:underline">
+            <span className="font-medium flex text-gray-500 items-center group-hover:underline">
             y Pedidos
             {/* Icono de flecha opcional */}
             <svg

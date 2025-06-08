@@ -15,7 +15,7 @@ export default function NadLang() {
             ></span>
 
             {/* Código de idioma */}
-            <span>ES</span>
+            <span className="text-gray-400">ES</span>
             </span>
         </a>
 

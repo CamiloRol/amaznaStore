@@ -1,6 +1,10 @@
 export const Header = () => {
+    const userEmail = localStorage.getItem('userEmail'); // Obtengo el email
+    const token = localStorage.getItem('token');
+    console.log(token);
+
   return (
-    <header className="bg-white shadow-md px-6 py-3 flex items-center justify-between">
+    <header className="Fixed  bg-white shadow-md px-6 py-3 flex items-center justify-between">
 
       {/* Buscador */}
       <form className="hidden md:flex items-center bg-gray-100 rounded-md px-3 py-1 w-64">
@@ -35,8 +39,8 @@ export const Header = () => {
 
         {/* Pefil del Usuariio */}
         <li className="relative flex items-center space-x-2">
-        <span className="hidden lg:block text-gray-500 text-sm">Administrador</span>
-        <div className="w-8 h-8 rounded-full bg-gray-900 flex items-center justify-center">
+        <span className="hidden lg:block text-gray-500 text-sm">{userEmail ? userEmail : "Usuario"}</span>
+        <div className="w-8 h-8 rounded-full bg-red-900 flex items-center justify-center">
             <i className="fas fa-user text-white"></i>
         </div>
         </li>
